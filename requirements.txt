@@ -3,6 +3,8 @@ numpy
 matplotlib
 seaborn
 scikit-learn
+imbalanced-learn
+statsmodels
 fastapi
 uvicorn
 pydantic

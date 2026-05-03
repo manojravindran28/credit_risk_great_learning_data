@@ -4,8 +4,6 @@ from src.pipeline.predict_pipeline import PredictPipeline
 
 app = FastAPI()
 
-pipeline = PredictPipeline()
-
 class InputData(BaseModel):
     balance: float
     income: float
@@ -17,6 +15,7 @@ def home():
 
 @app.post("/predict")
 def predict(data: InputData):
+    pipeline = PredictPipeline()
 
     pred, prob = pipeline.predict(
         data.balance,
